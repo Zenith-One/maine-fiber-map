@@ -1,10 +1,10 @@
 # Maine Fiber Map
 
-> details here
+A map of Maine, including fiber cable networks and lit buildings.
 
-<!-- ## How did I get here? -->
+## How did I get here? -->
 
-<!-- If you would like to recreate what I've done here, or if you're just curious about my process, I've written it up [here](/process.md). -->
+I've [written a bit](process.md) about the solutions I came up with and the various decisions I made along the way.
 
 ### Quick start
 
