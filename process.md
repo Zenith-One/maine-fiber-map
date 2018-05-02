@@ -15,7 +15,7 @@ There were several things in the seed project I didn't want or didn't need, so I
 ```bash
 $ yarn remove autoprefixer postcss-loader
 
-$yarn add leaflet leaflet-geometryutil
+$ yarn add leaflet leaflet-geometryutil
 ```
 
 ...and so on. If you want to see the full list of dependencies and what have you, you can check out the [package.json](package.json).

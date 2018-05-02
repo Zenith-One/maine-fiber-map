@@ -2,7 +2,7 @@
 
 A map of Maine, including fiber cable networks and lit buildings.
 
-## How did I get here? -->
+## How did I get here?
 
 I've [written a bit](process.md) about the solutions I came up with and the various decisions I made along the way.
 
