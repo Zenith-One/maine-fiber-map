@@ -57,7 +57,7 @@ function getClickHandler(map: L.Map, cableLayers: any[]){
 
 export const fiberMapDirective = (geoService: GeoJSONService) => {
   return {
-    template: require('./map.component.html'),
+    template: require('./fiber-map.directive.html'),
     link: (scope: ng.IScope, element: JQuery, attr: ng.IAttributes) => {
       let map: L.Map = L.map('map', {
         center: [45.290256, -68.942153],

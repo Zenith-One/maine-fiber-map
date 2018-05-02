@@ -2,9 +2,9 @@
 
 > details here
 
-## How did I get here?
+<!-- ## How did I get here? -->
 
-If you would like to recreate what I've done here, or if you're just curious about my process, I've written it up [here](/process.md).
+<!-- If you would like to recreate what I've done here, or if you're just curious about my process, I've written it up [here](/process.md). -->
 
 ### Quick start
 
@@ -23,7 +23,7 @@ $ yarn install
 $ npm start
 ```
 
-go to [http://localhost:4200](http://localhost:4200) in your browser.
+go to [http://localhost:8080](http://localhost:8080) in your browser.
 
 # Table of Contents
 
@@ -63,19 +63,14 @@ npm start
 
 It will start a local server using `webpack-dev-server` which will watch, build (in-memory), and reload for you. The port will be displayed to you as `http://localhost:8080`.
 
+> Note! due to webpack and github pages not being friendly this time around, local development is currently not possible. It is working on [github-pages](https://zenith-one.github.io/maine-fiber-map/) though.
+
 ## Developing
 
 ### Build files
 
 * single run: `npm run build`
 * build files and watch: `npm start`
-
-## Testing
-
-#### 1. Unit Tests
-
-* single run: `npm test`
-* live mode (TDD style): `npm run test-watch`
 
 # Credits/License
 
