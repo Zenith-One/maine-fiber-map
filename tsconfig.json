@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "target":"es5"
+  },
+  "files": [
+    "src/definitions/static-imports.d.ts",
+    "node_modules/@types/leaflet/index.d.ts"
+  ]
+}
