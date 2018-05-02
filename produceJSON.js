@@ -39,7 +39,6 @@ function getUnusedColorCode(){
 }
 
 function parseGeoJSON(features, outPath, doColors, colorOutPath){
-  // console.log(body);
   if(doColors){
     features.forEach((feature) => {
       let owner = feature.properties.OWNER;
@@ -64,13 +63,11 @@ function parseGeoJSON(features, outPath, doColors, colorOutPath){
 }
 
 function shpToJson(filePath, outPath, doColors, colorOutPath){
-  console.log('doing a thing!');
   let features = [];
   shapefile.open(filePath,filePath.replace(/\.shp$/,'.dbf'))
     .then(source => source.read()
       .then(function step(result, acc) {
         if (result.done) {
-          console.log('finishing up',filePath);
           parseGeoJSON(features, outPath, doColors, colorOutPath);
           return acc;
         }
@@ -85,4 +82,4 @@ function shpToJson(filePath, outPath, doColors, colorOutPath){
 
 let dataDir = './src/public/data/';
 shpToJson(dataDir + 'cables/maine_fiber_cables.shp', dataDir + 'cables/cables.json',true, dataDir + 'colors.json');
-shpToJson(dataDir + 'buildings/maine_fiber_buildings.shp', dataDir + 'buildings/buildings.json');
+shpToJson(dataDir + 'buildings/maine_lit_buildings.shp', dataDir + 'buildings/buildings.json');
