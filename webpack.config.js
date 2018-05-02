@@ -50,7 +50,7 @@ module.exports = function makeWebpackConfig() {
 
     // Output path from the view of the page
     // Uses webpack-dev-server in development
-    publicPath: isProd ? '/' : 'http://127.0.0.1:8080/',
+    publicPath: isProd ? '/maine-fiber-map/dist' : 'http://127.0.0.1:8080/',
 
     // Filename for entry points
     // Only adds hash in build mode
