@@ -10,29 +10,19 @@ That done, I was ready to get going.
 $ yarn install
 ```
 
-There were several things in the seed project I didn't want or didn't need, so I removed them.
+There were several things in the seed project I didn't want or didn't need, so I removed them. There were likewise several things I knew I would.
 
 ```bash
-$ yarn remove autoprefixer
-$ yarn remove postcss-loader
+$ yarn remove autoprefixer postcss-loader
+
+$yarn add leaflet leaflet-geometryutil
 ```
 
-Instead, I wanted to use sass, so I added a sass loader
-
-```bash
-$ yarn add sass-loader@6.0.3
-```
-
-I knew I would need several libraries in addition to those included in the seed, so I installed them:
-
-```bash
-$ yarn add ui-leaflet bootstrap
-
-```
+...and so on. If you want to see the full list of dependencies and what have you, you can check out the [package.json](package.json).
 
 The most notable decision I made was in using TypeScript. I wanted to show that TypeScript can play well with AngularJS, and I believe I have managed to do so.
 
-## Data Processing
+## Data Processing - [produceJSON.js](produceJSON.js)
 
 I knew that I would eventually need to come up with some color-coding for the fiber cables, so I wrote a few functions which collectively generate random colors. In addition, there is a dictionary of used colors which the generator checks against to ensure that the colors for the various cable owners are all unique. A possible future enhancement would be refining the manner in which the colors are generated to also ensure a high level of contrast between different owners.
 
@@ -42,7 +32,7 @@ It's worth noting that my original plan was to use shpjs and serve the zip files
 
 The one final bit of interest in this section was the decision to pregen the color codes and write those to a JSON file as well. When processing the cable data, there is a section of code which iterates through the individual cable segment and examines the owner. It then does a lookup to see if there is already a color for that owner. If there isn't, it generates a unique one. Once it's done with all of that, it writes the list of owners with their associated hex color codes to colors.json to be used later by the client.
 
-## Rendering Maps
+## Rendering Maps [fiber-map.directive.ts](src/app/map/fiber-map.directive.ts)
 
 The point of the previous exercise was to get the shapefile data into a format which Leaflet.JS can consume. Therefore, with that done, the next logical step was getting the client side consuming that data.  I did this via a tiny service (which is essentially little more than a proxy to $http) and a directive - `fiber-map.directive.ts`. The directive's link function interacts with Leaflet to initialize the map and its tile layer. Once that's done, it has a clickHandler generated based on the current map and data. This clickHandler will later be used by the building layers.
 
